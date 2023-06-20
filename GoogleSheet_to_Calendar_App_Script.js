@@ -34,3 +34,10 @@ function ScheduleScrims() {
     }
   }
 }
+
+function onOpen() { //it adds button for using sync
+  var ui = SpreadsheetApp.getUi();
+  ui.createMenu('Sync to Calendar')
+  .addItem('Update Calendar', 'ScheduleScrims')
+  .addToUi();
+}
